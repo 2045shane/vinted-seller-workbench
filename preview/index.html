@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vinted Seller Workbench — fixture preview</title>
+    <link rel="stylesheet" href="./dist/popup.css" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #d7cfc3;
+        font: 14px/1.4 "Segoe UI", sans-serif;
+        color: #241c16;
+      }
+      .desk { display: flex; gap: 24px; align-items: flex-start; padding: 24px; }
+      .controls {
+        width: 280px;
+        background: #fffdf9;
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .controls h1 { font-size: 16px; margin: 0 0 8px; }
+      .controls p { margin: 0 0 10px; color: #6f655b; }
+      .controls button {
+        display: block;
+        width: 100%;
+        margin: 0 0 8px;
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid #3f2a1d;
+        background: #fffdf9;
+        color: #241c16;
+        cursor: pointer;
+      }
+      .frame { box-shadow: 0 12px 40px rgba(40, 28, 16, 0.18); }
+    </style>
+  </head>
+  <body>
+    <div class="desk">
+      <aside class="controls">
+        <h1>Fixture preview</h1>
+        <p>This page runs the real popup against fixture listings. It is not a live Vinted session and it is not a companion dashboard.</p>
+        <button type="button" data-fixture="reset">Reset fixture</button>
+        <button type="button" data-fixture="signed-out">Simulate signed out</button>
+        <button type="button" data-fixture="cap">Fill today's free caps</button>
+        <p>Felt hat (id 104) fails on apply. Silk scarf has no price. The belt-less fifth row has an empty title and must show 5.00, not the buyer-fee total.</p>
+      </aside>
+      <div class="frame">
+        <div id="app"></div>
+      </div>
+    </div>
+    <script src="./dist/preview.js"></script>
+  </body>
+</html>
