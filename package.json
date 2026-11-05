@@ -1,0 +1,19 @@
+{
+  "name": "vinted-seller-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run && tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "preview": "npm run build && node scripts/preview-server.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.1",
+    "@types/node": "^22.19.0",
+    "esbuild": "^0.25.11",
+    "happy-dom": "^20.0.10",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
